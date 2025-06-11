@@ -52,7 +52,13 @@ export default function CocktailCard({ cocktail }) {
             </span>
           </div>
 
-          <p className="text-gray-600 text-sm line-clamp-2 flex-grow">{cocktail.descrizione}</p>
+          {/* <p className="text-gray-600 text-sm line-clamp-2 flex-grow">{cocktail.descrizione}</p> */}
+
+          <ul className="text-gray-600 text-sm line-clamp-2 flex-grow list-disc list-inside">
+            {cocktail.ingredienti.map((ing, i) => (
+              <li key={i}>{ing}</li>
+            ))}
+          </ul>
 
           <div className="flex items-center justify-between mt-4 pt-3 border-t border-gray-100">
             <div className="flex items-center text-amber-700">

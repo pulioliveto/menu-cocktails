@@ -33,6 +33,22 @@ export const cocktails = [
     guarnizione: "Fetta d'arancia",
   },
   {
+    nome: "Hugo Spritz",
+    categoria: "Aperitivi",
+    prezzo: 6.0,
+    immagine: "/placeholder.svg?height=300&width=300",
+    descrizione: "Un aperitivo fresco e aromatico a base di prosecco e sciroppo di fiori di sambuco.",
+    ingredienti: [
+      "60ml Prosecco",
+      "20ml Sciroppo di fiori di sambuco",
+      "Soda q.b.",
+      "Foglie di menta"
+    ],
+    preparazione:
+      "Versare il prosecco e lo sciroppo di fiori di sambuco in un bicchiere con ghiaccio. Aggiungere la soda e le foglie di menta. Mescolare delicatamente.",
+    guarnizione: "Fetta di lime o limone",
+  },
+  {
     nome: "Cosmopolitan",
     categoria: "Speciali",
     prezzo: 9.0,
