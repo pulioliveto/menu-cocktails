@@ -20,11 +20,19 @@ export default function Home() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Supón que search es tu texto de búsqueda
+  const searchWords = search.toLowerCase().split(" ").filter(Boolean);
+
   // Filtrar cócteles por búsqueda y categoría
-  const filteredCocktails = cocktails.filter((cocktail) => {
-    const matchesSearch = cocktail.nome.toLowerCase().includes(search.toLowerCase())
-    const matchesCategory = activeCategory === "tutti" || cocktail.categoria === activeCategory
-    return matchesSearch && matchesCategory
+  const filteredCocktails = cocktails.filter(cocktail => {
+    // Unir nombre e ingredientes en un solo string para buscar en ambos
+    const searchable = [
+      cocktail.nome,
+      ...(Array.isArray(cocktail.ingredienti) ? cocktail.ingredienti : [])
+    ].join(" ").toLowerCase();
+
+    // Cada palabra de búsqueda debe estar en el string
+    return searchWords.every(word => searchable.includes(word));
   })
 
   // Obtener categorías únicas
@@ -41,7 +49,7 @@ export default function Home() {
       />
 
       {/* Hero section */}
-      <section className="relative bg-amber-900 text-white overflow-hidden">
+      {/* <section className="relative bg-amber-900 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
             src="/placeholder.svg?height=600&width=1200"
@@ -71,7 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Menu section */}
       <section id="menu" className="container mx-auto px-4 py-12">

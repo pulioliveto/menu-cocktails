@@ -369,4 +369,21 @@ export const cocktails = [
       "Versare la vodka e il succo d'arancia in un bicchiere highball con ghiaccio. Mescolare delicatamente.",
     guarnizione: "Fetta d'arancia",
   },
+  {
+    nome: "4 Bianchi",
+    categoria: "Classici",
+    prezzo: 7.0,
+    immagine: "/placeholder.svg?height=300&width=300",
+    descrizione: "Un trago fuerte y clásico, servido generalmente in un vaso old fashioned o vaso corto con hielo.",
+    ingredienti: [
+      "20ml Vodka",
+      "20ml Gin",
+      "20ml Rum bianco",
+      "20ml Tequila",
+      "Ghiaccio"
+    ],
+    preparazione:
+      "Versare tutti gli ingredienti in un bicchiere old fashioned con ghiaccio. Mescolare delicatamente.",
+    guarnizione: "Spicchio di lime o scorza",
+  },
 ]
